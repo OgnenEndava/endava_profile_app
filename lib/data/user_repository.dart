@@ -8,6 +8,6 @@ class UserRepository {
   Future<bool> hasToken() async {
     // todo
     await Future.delayed(Duration(seconds: 1));
-    return false;
+    return true;
   }
 }

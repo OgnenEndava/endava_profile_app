@@ -18,7 +18,7 @@ class AuthService {
     AuthPath.me: "/v1/me",
   };
 
-  static String authToken = '';
+  static String authToken = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2LCJleHAiOjE2MTc1NDgyMTJ9.L9UrTgnrWjXtc9FRRbSjhD2QwU3ohSzFgc02lPtIOPg";
 
   Map<String, String> headers = {'Content-Type': 'application/json'};
 

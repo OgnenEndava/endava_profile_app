@@ -1,6 +1,7 @@
 import 'package:endava_profile_app/data/user_repository.dart';
 import 'package:endava_profile_app/modules/auth/bloc/authentication_state.dart';
 import 'package:endava_profile_app/modules/contributors/contributors_screen.dart';
+import 'package:endava_profile_app/modules/education/education_training_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,6 +32,7 @@ class EndavaProfileApp extends StatelessWidget {
       title: 'Endava Profile',
       routes: {
         AppRoute.of(AppScreen.login): (c) => LoginScreen(),
+        AppRoute.of(AppScreen.educationAndTraining): (c) => EducationTrainingScreen(),
         AppRoute.of(AppScreen.contributors): (c) =>
             ContributorsScreen(repository: 'stpopa/endava_profile_app'),
       },
@@ -38,7 +40,7 @@ class EndavaProfileApp extends StatelessWidget {
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
           if (state is AuthenticatedState) {
-            return HomeScreen();
+            return EducationTrainingScreen();
           }
           return LoginScreen();
         },
